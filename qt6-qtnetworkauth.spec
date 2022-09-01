@@ -36,7 +36,7 @@ Group: Development/KDE and Qt
 Examples for the Qt %{major} Network Authentication module
 
 %files examples
-%{_qtdir}/examples/oauth
+%optional %{_qtdir}/examples/oauth
 
 %prep
 %autosetup -p1 -n qtnetworkauth%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
