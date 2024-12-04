@@ -5,13 +5,13 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qtnetworkauth
-Version:	6.8.0
+Version:	6.8.1
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtnetworkauth.git
 Source:		qtnetworkauth-%{?snapshot:%{snapshot}}%{!?snapshot:%{version}}.tar.zst
 %else
-Source:		http://download.qt-project.org/%{?beta:development}%{!?beta:official}_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}%{?beta:-%{beta}}/submodules/qtnetworkauth-everywhere-src-%{version}%{?beta:-%{beta}}.tar.xz
+Source:		https://download.qt-project.org/%{?beta:development}%{!?beta:official}_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}%{?beta:-%{beta}}/submodules/qtnetworkauth-everywhere-src-%{version}%{?beta:-%{beta}}.tar.xz
 %endif
 Group:		System/Libraries
 Summary:	Qt %{major} Network Authentication module
@@ -25,6 +25,9 @@ License:	LGPLv3/GPLv3/GPLv2
 
 %description
 Qt %{major} network authentication module
+
+%define extra_devel_files_NetworkAuth \
+%{_qtdir}/sbom/*
 
 %qt6libs NetworkAuth
 
