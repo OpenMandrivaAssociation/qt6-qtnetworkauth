@@ -18,6 +18,7 @@ Summary:	Qt %{major} Network Authentication module
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt%{major}Core)
+BuildRequires:	cmake(Qt%{major}Gui)
 BuildRequires:	cmake(Qt%{major}Network)
 BuildRequires:	cmake(Qt%{major}Widgets)
 BuildRequires:	qt%{major}-cmake
