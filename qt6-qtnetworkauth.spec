@@ -22,6 +22,7 @@ BuildRequires:	cmake(Qt%{major}Gui)
 BuildRequires:	cmake(Qt%{major}Network)
 BuildRequires:	cmake(Qt%{major}OpenGL)
 BuildRequires:	cmake(Qt%{major}Widgets)
+BuildRequires:	pkgconfig(opengl)
 BuildRequires:	qt%{major}-cmake
 License:	LGPLv3/GPLv3/GPLv2
 
